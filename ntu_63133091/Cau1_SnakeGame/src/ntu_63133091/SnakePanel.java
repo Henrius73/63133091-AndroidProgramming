@@ -67,6 +67,13 @@ public class SnakePanel extends JPanel implements ActionListener{
         foodX=random.nextInt((int)(S_Width/Game_unit_size))*Game_unit_size;
         foodY=random.nextInt((int)(S_Height/Game_unit_size))*Game_unit_size;
     }
+    public void food_EatenOrNot() {
+        if((x_snake[0]==foodX)&&(y_snake[0]==foodY)){
+            bodylength++;
+            foodEAten++;
+            newfoodPosition();
+        }
+    }
     public class MyKey extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
