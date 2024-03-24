@@ -74,6 +74,22 @@ public class SnakePanel extends JPanel implements ActionListener{
             newfoodPosition();
         }
     }
+    public void checkHit() {
+    	// for checking if by mistake snake bite itself and if it collides with walls
+    	        for (int i=bodylength;i>0;i--)
+    	            {if((x_snake[0]==x_snake[i])&&(y_snake[0]==y_snake[i]))
+    	                {game_flag=false;}}
+    	        if(x_snake[0]<0)
+    	            {game_flag=false;}
+    	        if(x_snake[0]>S_Width)
+    	           { game_flag=false;}
+    	        if (y_snake[0] < 0) 
+    	        {    game_flag = false;}
+    	        if (y_snake[0] > S_Height) 
+    	        {    game_flag = false;}
+    	        if(!game_flag)
+    	          {  timer.stop();}
+    	    }
     public class MyKey extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
