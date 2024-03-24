@@ -162,4 +162,13 @@ public class SnakePanel extends JPanel implements ActionListener{
             }            
         }
     }
+    @Override
+    public void actionPerformed(ActionEvent arg0) {
+        if (game_flag) {
+            move();
+            food_EatenOrNot();
+            checkHit();
+        }
+        repaint();
+    }
 }
