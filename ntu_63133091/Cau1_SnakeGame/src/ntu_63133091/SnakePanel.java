@@ -63,6 +63,26 @@ public class SnakePanel extends JPanel implements ActionListener{
             gameOver(graphic);
         }
     }
+    public void move() {
+        for(int i=bodylength;i>0;i--){
+            x_snake[i]=x_snake[i-1];
+            y_snake[i]=y_snake[i-1];
+        }
+        switch (dir) {
+            case 'U':
+            y_snake[0]=y_snake[0]-Game_unit_size;
+                break;
+            case 'L':
+                x_snake[0] = x_snake[0] - Game_unit_size;
+                break;
+            case 'D':
+                y_snake[0] = y_snake[0] + Game_unit_size;
+                break;
+            case 'R':
+                x_snake[0] = x_snake[0] + Game_unit_size;
+                break;
+        }
+    }
     public void newfoodPosition() {
         foodX=random.nextInt((int)(S_Width/Game_unit_size))*Game_unit_size;
         foodY=random.nextInt((int)(S_Height/Game_unit_size))*Game_unit_size;
@@ -75,8 +95,7 @@ public class SnakePanel extends JPanel implements ActionListener{
         }
     }
     public void checkHit() {
-    	// for checking if by mistake snake bite itself and if it collides with walls
-    	        for (int i=bodylength;i>0;i--)
+    			for (int i=bodylength;i>0;i--)
     	            {if((x_snake[0]==x_snake[i])&&(y_snake[0]==y_snake[i]))
     	                {game_flag=false;}}
     	        if(x_snake[0]<0)
@@ -90,7 +109,7 @@ public class SnakePanel extends JPanel implements ActionListener{
     	        if(!game_flag)
     	          {  timer.stop();}
     	    }
-    public void gameOver(Graphics graphic) {// When ever game is over this function will be called.
+    public void gameOver(Graphics graphic) {
         graphic.setColor(Color.red);
         graphic.setFont(new Font("Ink Free", Font.BOLD, 40));
         FontMetrics font_me = getFontMetrics(graphic.getFont());
