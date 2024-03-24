@@ -36,5 +36,31 @@ public class SnakePanel extends JPanel implements ActionListener{
 		timer = new Timer(DELAY,this);
 		timer.start();
 	}
-	
+	public void paintComponent(Graphics graphic) {
+        super.paintComponent(graphic);
+        draw(graphic);
+    }
+    public void draw(Graphics graphic) {
+        if(game_flag){
+            graphic.setColor(Color.yellow);
+            graphic.fillOval(foodX, foodY,Game_unit_size,Game_unit_size);
+            for(int i=0;i<bodylength;i++){
+                if(i==0){
+                    graphic.setColor(Color.green);
+                    graphic.fillRect(x_snake[i],y_snake[i],Game_unit_size,Game_unit_size);
+                }
+                else{
+                    graphic.setColor(new Color(50,180,0));
+                    graphic.fillRect(x_snake[i],y_snake[i],Game_unit_size,Game_unit_size);
+                }
+            }
+           graphic.setColor(Color.blue);
+           graphic.setFont(new Font("Ink Free",Font.BOLD,40));
+           FontMetrics font_me=getFontMetrics(graphic.getFont());
+           graphic.drawString("Score:"+foodEAten,(S_Width-font_me.stringWidth("Score:"+foodEAten))/2,graphic.getFont().getSize());
+        }
+        else{
+            gameOver(graphic);
+        }
+    }
 }
