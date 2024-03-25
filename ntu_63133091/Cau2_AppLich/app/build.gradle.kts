@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "ntu_63133091.cau2_applich"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
