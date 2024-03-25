@@ -46,7 +46,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linlay1"
         android:layout_centerHorizontal="true">
-        
+        <TextView
+            android:id="@+id/multilineTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:inputType="textMultiLine"
+            android:textSize="24dp"
+            />
     </LinearLayout>
 
 
