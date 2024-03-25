@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="50dp"
-            android:text="Trường: Đại Học Nha Trang\nLớp: 63-CNTT-2\nMSSV: 63133091\nNgày sinh: 10/07/2003\nEmail:quan.nt.63cntt@ntu.edu.vn\nSở thích: Chơi game, xem phim, nghe nhạc"
+            android:text="Trường: Đại Học Nha Trang\nLớp: 63.CNTT-2\nMSSV: 63133091\nNgày sinh: 10/07/2003\nEmail:quan.nt.63cntt@ntu.edu.vn\nSở thích: Chơi game, xem phim, nghe nhạc"
             android:inputType="textMultiLine"
             android:textSize="24dp"
             />
