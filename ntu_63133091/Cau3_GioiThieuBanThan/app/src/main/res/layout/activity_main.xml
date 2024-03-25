@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            
+
             android:layout_height="wrap_content">
 
             <ImageView
@@ -46,6 +46,7 @@
             android:textSize="32sp" />
     </RelativeLayout>
     <LinearLayout
+        android:id="@+id/linlay2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linlay1"
@@ -60,7 +61,20 @@
             android:textSize="24dp"
             />
     </LinearLayout>
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linlay2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:src="@drawable/fb"/>
+            
+        </LinearLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>
