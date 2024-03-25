@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CalendarViewHolder extends RecyclerView.ViewHolder {
-    private final TextView dayofMonth;
+    public final TextView dayofMonth;
     public CalendarViewHolder(@NonNull View itemView) {
         super(itemView);
         dayofMonth = itemView.findViewById(R.id.cellDayText);
