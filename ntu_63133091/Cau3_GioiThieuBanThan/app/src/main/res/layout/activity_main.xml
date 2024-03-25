@@ -11,12 +11,14 @@
         android:id="@+id/linlay1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         >
         <RelativeLayout
             android:id="@+id/imgUser"
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            
             android:layout_height="wrap_content">
 
             <ImageView
@@ -52,7 +54,7 @@
             android:id="@+id/multilineTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="50dp"
             android:text="Trường: Đại Học Nha Trang\nLớp: 63-CNTT-2\nMSSV: 63133091\nNgày sinh: 10/07/2003\nEmail:quan.nt.63cntt@ntu.edu.vn\nSở thích: Chơi game, xem phim, nghe nhạc"
             android:inputType="textMultiLine"
             android:textSize="24dp"
