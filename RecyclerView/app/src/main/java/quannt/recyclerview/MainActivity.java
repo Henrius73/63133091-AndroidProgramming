@@ -16,21 +16,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //3
         recyclerViewDatas = getDataForRecyclerView();
-        //4
         recyclerViewLandScape = findViewById(R.id.recyclerLand);
-        //5
-        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
-        recyclerViewLandScape.setLayoutManager(layoutLinear);
+
+        //Dang 1 Doc
+        //RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
+        //recyclerViewLandscape.setLayoutManager(layoutLinear);
+
+        //Dang 2 Ngang
+        RecyclerView.LayoutManager layoutLinearHorizonal = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,    false);
+        recyclerViewLandScape.setLayoutManager(layoutLinearHorizonal);
+
+        //Dang 3 Grid
+        //RecyclerView.LayoutManager layoutGrid = new GridLayoutManager(this, 2);
+        //recyclerViewLandscape.setLayoutManager(layoutGrid);
+
         //6
         landScapeAdapter = new LandScapeAdapter(this, recyclerViewDatas);
+        recyclerViewLandScape.setAdapter(landScapeAdapter);
     }
     ArrayList<LandScape> getDataForRecyclerView(){
         ArrayList<LandScape> dsDulieu = new ArrayList<LandScape>();
         LandScape landScape1 = new LandScape("bigben", "Tháp big ben");
         LandScape landScape2 = new LandScape("buckingham","Cung điện Buckingham");
-        LandScape landScape3 = new LandScape("mountfuji","Núi Phú Sĩ (Nhật Bản)");
+        LandScape landScape3 = new LandScape("mountfuji","Núi Phú Sĩ");
         LandScape landScape4 = new LandScape("eiffiel","Tháp eiffeiel");
         dsDulieu.add(landScape1);
         dsDulieu.add(landScape2);
